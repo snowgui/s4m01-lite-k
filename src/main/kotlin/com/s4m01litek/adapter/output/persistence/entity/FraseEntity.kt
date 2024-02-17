@@ -12,8 +12,9 @@ class FraseEntity(
     val name: String,
     val content: String,
     val createdAt: LocalDateTime,
+    val origin: String? = null,
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Int = -1,
 ){
-    private constructor() : this("", "", LocalDateTime.now())
+    private constructor() : this(name = "", content = "", createdAt = LocalDateTime.now())
 }
